@@ -38,15 +38,14 @@ export default class Usuarios extends Component {
 
 
     render() {
-        // eslint-disable-next-line
-        const { usuarios, usuariosInfo, page } = this.state;
+        const { usuariosInfo, page } = this.state;
         return (
             <div className="usuario-list">
                 {this.state.usuarios.map(usuario => (
                     <article key={usuario._id}>
                         <strong>{usuario.nome}</strong>
                         <p>{usuario.matricula}</p>
-                        <p> <Link to={'/usuarios/${usuario._id)'}>Acessar</Link> </p>
+                        <p> <Link to={`/usuarios/${usuario._id}`}>Acessar</Link> </p>
                     </article>
                 ))}
                 <div className='actions'>

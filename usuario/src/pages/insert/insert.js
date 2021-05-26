@@ -32,7 +32,7 @@ class CriarUsuario extends Component {
                         <legend>Criar Usuário</legend>
                         <div className="usuario-insert">
                             <label htmlFor="nome">Nome </label>
-                            <br />
+                            
                             <input
                                 type="text"
                                 id="nome"
@@ -47,7 +47,7 @@ class CriarUsuario extends Component {
                         </div>
                         <div className="usuario-insert">
                             <label htmlFor="matricula">Matrícula </label>
-                            <br />
+                            
                             <input
                                 type="number"
                                 id="matricula"
@@ -62,7 +62,7 @@ class CriarUsuario extends Component {
                         </div>
                         <div className="usuario-insert">
                             <label htmlFor="cidade">Cidade </label>
-                            <br />
+                            
                             <input
                                 type="text"
                                 id="cidade"
@@ -77,7 +77,7 @@ class CriarUsuario extends Component {
                         </div>
                         <div className="usuario-insert">
                             <label htmlFor="estado">Estado </label>
-                            <br />
+                            
                             <input
                                 type="text"
                                 id="estado"
@@ -105,6 +105,7 @@ class CriarUsuario extends Component {
                             <label>
                                 <input
                                     type="radio"
+                                    id="radio"
                                     value="false"
                                     name="ativo"
                                     checked={this.state.usuario.ativo === "false"}
@@ -115,7 +116,7 @@ class CriarUsuario extends Component {
                         </div>
 
 
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" id="btn" className="btn btn-primary">
                             Cadastrar
                         </button>
                     </fieldset>
@@ -164,5 +165,4 @@ class CriarUsuario extends Component {
         event.preventDefault();
     };
 }
-
 export default CriarUsuario;

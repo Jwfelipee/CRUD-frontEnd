@@ -4,12 +4,48 @@
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 26px;
     color: dimgray;
+}
+.usuario-delete p{
+    font-size: 26px;
 }
 
 .usuario-delete label{
-    font-size: 20px;
+    font-size: 30px;
     color: black;
     font-weight: bold;
+}
+
+#linkDelete{
+    border: 1px solid black;
+    border-radius: 20px;
+    background: #71d766;
+    color: white;
+    font-size: 24px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 2%;
+}
+#linkDelete:hover{
+    border: 1px solid black;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-size: 32px;
+}
+
+#btnDelete{
+    border-radius: 20px;
+    background: #71d766;
+    color: white;
+    font-size: 24px;
+}
+#btnDelete:hover{
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-size: 32px;
 }

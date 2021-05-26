@@ -40,9 +40,9 @@ export default class Usuario extends Component {
                 <h1>Cidade: {usuario.endereco.cidade}</h1>
                 <h1>Estado: {usuario.endereco.estado}</h1>
                 <br/>
-                <Link to={`/`}>Voltar a Home page</Link><br/>
-                <Link to={`/EditarUsuario/${usuario._id}`}>Editar</Link><br/>
-                <Link to={`/DeletarUsuario/${usuario._id}`}>Deletar</Link><br/>
+                <Link to={`/`} id="link1">Voltar a Home page</Link>
+                <Link to={`/EditarUsuario/${usuario._id}`} id="link2">Editar</Link>
+                <Link to={`/DeletarUsuario/${usuario._id}`} id="link3">Deletar</Link>
             </div>
         )
     }

@@ -1,19 +1,16 @@
-#main {
+#mains {
     width: 100%;
     height: 80px;
     background: #71d766;
     font-size: 40px;
     font-weight: bold;
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
 }
-#main a{
-    color: black;
-}
 
-#main :hover{
-    color: white;
+#mains :hover{
+    color: black;
 }

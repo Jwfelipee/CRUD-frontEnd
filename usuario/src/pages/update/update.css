@@ -4,12 +4,36 @@
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 26px;
     color: dimgray;
 }
 
 .usuario-update label{
-    font-size: 20px;
+    font-size: 30px;
     color: black;
     font-weight: bold;
+}
+#btn{
+    border-radius: 10px;
+    background: #71d766;
+    color: white;
+    font-size: 24px;
+}
+#btn:hover{
+    border-radius: 10px;
+    background: black;
+    color: white;
+    font-size: 32px;
+}
+#nome{
+    margin-left: 77px;
+}
+#numero{
+    margin-left: 24px;
+}
+#cidade{
+    margin-left: 60px;
+}
+#estado{
+    margin-left: 64px;
 }

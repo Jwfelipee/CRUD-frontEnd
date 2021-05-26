@@ -9,9 +9,10 @@
 .usuario-list article{
     background: aliceblue;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
     margin-top: 5px;
+    font-size: 26px;
 }
 
 .usuario-list article p{
@@ -37,6 +38,81 @@
 }
 
 .usuario-list article a:hover{
-    background: blue;
+    background: #71d766;
     color: white;
+}
+
+.actions{
+    margin-top: 2%;
+    border: 2px solid black;
+    border-radius: 20%;
+    margin-right: 15%;
+    margin-left: 15%;
+    background: white;
+}
+
+.actions2:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    border: 2px solid black;
+    border-radius: 20%;
+    margin-right: 15%;
+    margin-left: 15%;
+    background: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background: #71d766;
+    color: white;
+}
+.actions2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    border: 2px solid black;
+
+    border-radius: 20%;
+    margin-right: 15%;
+    margin-left: 15%;
+    background: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#btn4{
+    font-size: 24px;
+}
+#btn1{
+    margin-right: 5%;
+    padding-top: 1%;
+    font-size: 18px;
+}
+#btn2{
+    margin-left: 5%;
+    padding-top: 1%;
+    font-size: 18px;
+}
+#btn3{
+    padding-top: 1%;
+    font-size: 18px;
+}
+
+
+#btn1:hover{
+    background: #105;
+    color: white;
+    font-size: 22px;
+}
+
+#btn2:hover{
+    background: #000;
+    color: white;
+    font-size: 22px;
+}
+
+#btn3:hover{
+    background: #999;
+    color: black;
+    font-size: 22px;
 }

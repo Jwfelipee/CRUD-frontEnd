@@ -4,12 +4,28 @@
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 26px;
     color: dimgray;
 }
 
 .usuario-insert label{
-    font-size: 20px;
+    font-size: 30px;
     color: black;
     font-weight: bold;
+}
+
+#radio{
+    margin-left: 1%;
+}
+#nome{
+    margin-left: 77px;
+}
+#matricula{
+    margin-left: 24px;
+}
+#cidade{
+    margin-left: 60px;
+}
+#estado{
+    margin-left: 64px;
 }

@@ -21,16 +21,24 @@ export default class Usuarios extends Component {
     }
 
     prevPage = () => {
-        const {page} = this.state;
-        if(page === 1) return;
+        const { page } = this.state;
+        if (page === 1) return;
 
         const pageNumber = page - 1;
         this.loadUsuarios(pageNumber);
     }
 
+    homePage = () => {
+        const { page } = this.state;
+        if (page === 1) return;
+
+        const pageNumber = 1;
+        this.loadUsuarios(pageNumber);
+    }
+
     nextPage = () => {
-        const {page, usuariosInfo} = this.state;
-        if(page === usuariosInfo.pages) return;
+        const { page, usuariosInfo } = this.state;
+        if (page === usuariosInfo.pages) return;
 
         const pageNumber = page + 1;
         this.loadUsuarios(pageNumber);
@@ -41,16 +49,22 @@ export default class Usuarios extends Component {
         const { usuariosInfo, page } = this.state;
         return (
             <div className="usuario-list">
+                <a href="http://localhost:3000/CriarUsuarios">
+                    <div className='actions2'>
+                     <button id="btn4">Criar um Usuario</button>
+                </div>
+                </a>
                 {this.state.usuarios.map(usuario => (
                     <article key={usuario._id}>
-                        <strong>{usuario.nome}</strong>
-                        <p>{usuario.matricula}</p>
-                        <p> <Link to={`/usuarios/${usuario._id}`}>Acessar</Link> </p>
+                        <strong>Nome: {usuario.nome}</strong>
+                        <p>Matricula Nº: {usuario.matricula}</p>
+                        <p> <Link to={`/usuarios/${usuario._id}`}><h1>Acessar</h1></Link> </p>
                     </article>
                 ))}
                 <div className='actions'>
-                    <button disabled={page===1} onClick={this.prevPage}>Anterior</button>
-                    <button disabled={page===usuariosInfo.pages} onClick={this.nextPage}>Proximo</button>
+                    <button disabled={page === 1} onClick={this.prevPage} id="btn1">Anterior</button>
+                    <button disabled={page === 1 || page === 2} onClick={this.homePage} id="btn3">Home</button>
+                    <button disabled={page === usuariosInfo.pages} onClick={this.nextPage} id="btn2">Proximo</button>
                 </div>
             </div>
         )

@@ -29,14 +29,13 @@ class DeletarUsuario extends Component {
                 <fieldset>
                     <legend>Deletar Usuario</legend>
                     <div className="usuario-delete">
-                        <label htmlFor="nome">Nome</label>
-                        <h5>{this.state.usuario.nome}</h5>
+                        <h2>Nome: {this.state.usuario.nome}</h2>
                         <p> Tem certeza que deseja deletar este Registro!</p>
 
-                        <button onClick={this.handleClick}> Remover </button>
-                        <br /><br />
+                        <button onClick={this.handleClick} id="btnDelete"> Remover </button>
+                 
 
-                        <Link to={'/'}> Voltar </Link>
+                        <Link to={'/'} id="linkDelete"> Voltar </Link>
                     </div>
                 </fieldset>
             )

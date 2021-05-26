@@ -10,7 +10,7 @@ class EditarUsuario extends Component {
         this.state = {
             usuario: {
                 nome: "",
-                matricula: 0,
+                numero: 0,
                 endereco: {
                     cidade: "",
                     estado: ""
@@ -34,10 +34,9 @@ class EditarUsuario extends Component {
             return (
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <legend>Eriar Usuário</legend>
+                        <legend>Editar Usuário</legend>
                         <div className="usuario-update">
-                            <label htmlFor="nome">Nome </label>
-                            <br />
+                            <label htmlFor="nome">Nome: </label>
                             <input
                                 type="text"
                                 id="nome"
@@ -51,23 +50,23 @@ class EditarUsuario extends Component {
                             />
                         </div>
                         <div className="usuario-update">
-                            <label htmlFor="matricula">Matrícula </label>
-                            <br />
+                            <label htmlFor="numero">Numero: </label>
+                            
                             <input
                                 type="number"
-                                id="matricula"
-                                name="matricula"
-                                placeholder="Matrícula"
+                                id="numero"
+                                name="numero"
+                                placeholder="numero"
                                 min="1"
                                 max="99999"
                                 required
-                                value={this.state.usuario.matricula}
+                                value={this.state.usuario.numero}
                                 onChange={this.handleInputChange}
                             />
                         </div>
                         <div className="usuario-update">
-                            <label htmlFor="cidade">Cidade </label>
-                            <br />
+                            <label htmlFor="cidade">Cidade: </label>
+                            
                             <input
                                 type="text"
                                 id="cidade"
@@ -81,8 +80,8 @@ class EditarUsuario extends Component {
                             />
                         </div>
                         <div className="usuario-update">
-                            <label htmlFor="estado">Estado </label>
-                            <br />
+                            <label htmlFor="estado">Estado: </label>
+                   
                             <input
                                 type="text"
                                 id="estado"
@@ -96,8 +95,7 @@ class EditarUsuario extends Component {
                             />
                         </div>
                         <br />
-                        
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" id="btn" className="btn btn-primary">
                             Editar
                         </button>
                     </fieldset>

@@ -4,7 +4,7 @@ import GitHubCorner from '../GitHubCorner/index';
 
 const Header = () => (
     <div> 
-        <GitHubCorner></GitHubCorner>
+        <GitHubCorner />
     <header id="main"><a href="/">Usuários</a></header>
     </div>
 );

@@ -52,7 +52,7 @@ export default class Usuarios extends Component {
         return (
             <Container fluid className="div2">
             <div className="usuario-list">
-                <a href="https://crud-front-end-dois.vercel.app/CriarUsuarios">
+                <a href="/CriarUsuarios">
                     <div className='actions2'>
                      <button id="btn4">Criar um Usuario</button>
                 </div>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import api from '../../services/services';
 import { Link } from 'react-router-dom';
 import './details.css'
+import {Container} from 'reactstrap';
+
 
 export default class Usuario extends Component {
     state = {
@@ -33,6 +35,7 @@ export default class Usuario extends Component {
         }
 
         return (
+            <Container fluid className="div1">
             <div className="usuario-info">
                 <h1>Nome: {usuario.nome}</h1>
                 <h1>Matricula Nº: {usuario.matricula}</h1>
@@ -44,6 +47,7 @@ export default class Usuario extends Component {
                 <Link to={`/EditarUsuario/${usuario._id}`} id="link2">Editar</Link>
                 <Link to={`/DeletarUsuario/${usuario._id}`} id="link3">Deletar</Link>
             </div>
+            </Container>
         )
     }
 }

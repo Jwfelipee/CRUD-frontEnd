@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import api from '../../services/services';
 import { Link } from 'react-router-dom';
 import './index.css';
+import {Container} from 'reactstrap';
+
 
 export default class Usuarios extends Component {
     state = {
@@ -48,8 +50,9 @@ export default class Usuarios extends Component {
     render() {
         const { usuariosInfo, page } = this.state;
         return (
+            <Container fluid className="div2">
             <div className="usuario-list">
-                <a href="http://localhost:3000/CriarUsuarios">
+                <a href="https://crud-front-end-dois.vercel.app/CriarUsuarios">
                     <div className='actions2'>
                      <button id="btn4">Criar um Usuario</button>
                 </div>
@@ -67,6 +70,7 @@ export default class Usuarios extends Component {
                     <button disabled={page === usuariosInfo.pages} onClick={this.nextPage} id="btn2">Proximo</button>
                 </div>
             </div>
+            </Container>
         )
     }
 }

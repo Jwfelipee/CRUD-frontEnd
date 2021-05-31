@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import './delete.css';
 import api from '../../services/services';
+import {Container} from 'reactstrap';
+
 
 class DeletarUsuario extends Component {
     constructor(props) {
@@ -26,6 +28,7 @@ class DeletarUsuario extends Component {
             return <Redirect to="/" />;
         } else {
             return (
+                <Container fluid className="div1">
                 <fieldset>
                     <legend>Deletar Usuario</legend>
                     <div className="usuario-delete">
@@ -38,6 +41,7 @@ class DeletarUsuario extends Component {
                         <Link to={'/'} id="linkDelete"> Voltar </Link>
                     </div>
                 </fieldset>
+                </Container>
             )
         }
     }
@@ -45,7 +49,7 @@ class DeletarUsuario extends Component {
     handleClick = event => {
         const { id } = this.props.match.params;
 
-        fetch(`http://localhost:3001/sistema/usuarios/${id}`, {
+        fetch(`https://api-crud-backend.herokuapp.com/sistema/usuarios/${id}`, {
             method: "delete"
         })
 

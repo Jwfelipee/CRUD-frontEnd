@@ -10,6 +10,10 @@
     padding-bottom: 1%;
 }
 
+.div1{
+    min-height: 65vh;
+    padding-top: 5%;
+}
 .usuario-info h1{
     font-size: 32px;
     color: black;

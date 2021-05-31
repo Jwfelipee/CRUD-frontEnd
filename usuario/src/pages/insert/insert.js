@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './insert.css';
 import { Redirect } from 'react-router-dom';
-
+import {Container} from 'reactstrap';
 
 class CriarUsuario extends Component {
     constructor() {
@@ -27,6 +27,7 @@ class CriarUsuario extends Component {
             return <Redirect to="/" />;
         } else {
             return (
+                <Container fluid className="div1">
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
                         <legend>Criar Usuário</legend>
@@ -121,6 +122,7 @@ class CriarUsuario extends Component {
                         </button>
                     </fieldset>
                 </form>
+                </Container>
             );
         }
     }
@@ -148,7 +150,7 @@ class CriarUsuario extends Component {
     };
 
     handleSubmit = event => {
-        fetch("http://localhost:3001/sistema/usuarios", {
+        fetch("https://api-crud-backend.herokuapp.com/sistema/usuarios", {
             method: "post",
             body: JSON.stringify(this.state.usuario),
             headers: {

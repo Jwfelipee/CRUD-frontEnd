@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-const api = axios.create({baseURL: "http://localhost:3001/sistema"});
+const api = axios.create({baseURL: "https://api-crud-backend.herokuapp.com/sistema"});
 
 export default api;

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './update.css';
 import { Redirect } from 'react-router-dom';
 import api from '../../services/services';
+import {Container} from 'reactstrap';
+
 
 class EditarUsuario extends Component {
     constructor(props) {
@@ -10,7 +12,7 @@ class EditarUsuario extends Component {
         this.state = {
             usuario: {
                 nome: "",
-                numero: 0,
+                matricula: 0,
                 endereco: {
                     cidade: "",
                     estado: ""
@@ -32,6 +34,7 @@ class EditarUsuario extends Component {
             return <Redirect to="/" />;
         } else {
             return (
+                <Container fluid className="div1">
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
                         <legend>Editar Usuário</legend>
@@ -50,17 +53,17 @@ class EditarUsuario extends Component {
                             />
                         </div>
                         <div className="usuario-update">
-                            <label htmlFor="numero">Numero: </label>
+                            <label htmlFor="matricula">Matricula: </label>
                             
                             <input
                                 type="number"
-                                id="numero"
-                                name="numero"
-                                placeholder="numero"
+                                id="matricula"
+                                name="matricula"
+                                placeholder="Insira a Matricula"
                                 min="1"
                                 max="99999"
                                 required
-                                value={this.state.usuario.numero}
+                                value={this.state.usuario.matricula}
                                 onChange={this.handleInputChange}
                             />
                         </div>
@@ -100,6 +103,7 @@ class EditarUsuario extends Component {
                         </button>
                     </fieldset>
                 </form>
+                </Container>
             );
         }
     }
@@ -129,7 +133,7 @@ class EditarUsuario extends Component {
     handleSubmit = event => {
         const { id } = this.props.match.params;
 
-        fetch(`http://localhost:3001/sistema/usuarios/${id}`, {
+        fetch(`https://api-crud-backend.herokuapp.com/sistema/usuarios/${id}`, {
             method: "put",
             id: id,
             body: JSON.stringify(this.state.usuario),

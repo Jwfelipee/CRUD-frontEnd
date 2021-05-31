@@ -5,7 +5,9 @@
     text-align: center;
     align-items: center;
 }
-
+.div2{
+    min-height: 75vh;
+}
 .usuario-list article{
     background: aliceblue;
     border: 1px solid black;
